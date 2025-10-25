@@ -1,0 +1,74 @@
+.meetScreen {
+	width: 100%;
+	height: calc(100vh - 110px);
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	background: linear-gradient(
+		180deg,
+		rgba(127.5, 127.5, 127.5, 1),
+		rgba(38.25, 38.25, 38.25, 1) 100%
+	);
+
+	padding: 80px 0 120px 0;
+	h1 {
+		font-size: 48px;
+		text-align: left;
+		padding-left: 110px;
+	}
+
+	&__slider {
+		width: 100%;
+
+		&-slide {
+			img {
+				display: block;
+				margin: 0 auto;
+				width: 1600px;
+			}
+		}
+
+		&-btns {
+			display: flex;
+			justify-content: center;
+			column-gap: 40px;
+			margin-top: 40px;
+
+			button {
+				display: block;
+				border: 1px solid rgba(255, 255, 255, 1);
+				border-radius: 5px;
+				width: 80px;
+				height: 56px;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+
+	&-btn {
+		text-align: center;
+		width: 380px;
+		color: rgba(13, 13, 13, 1);
+		font-size: 22px;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 15px 0;
+		border-radius: 5px;
+		background: rgba(255, 253, 41, 1);
+		border: 2px rgba(255, 253, 41, 1) solid;
+		transition: all 0.1s ease-in;
+		margin: 0 auto;
+
+		&:hover {
+			color: rgba(255, 253, 41, 1);
+			background: transparent;
+		}
+	}
+}
