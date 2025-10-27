@@ -1,0 +1,294 @@
+.contacts {
+	padding: 60px 20px 80px;
+	width: 100%;
+	position: relative;
+
+	&__container {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	h2 {
+		font-size: 32px;
+		font-weight: 700;
+		text-align: center;
+		letter-spacing: 0.8px;
+		line-height: 1.2;
+
+		@media (min-width: 768px) {
+			font-size: 42px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 56px;
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+		margin-top: 40px;
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: center;
+			gap: 60px;
+			margin-top: 50px;
+		}
+
+		@media (min-width: 1024px) {
+			gap: 100px;
+			margin-top: 60px;
+		}
+
+		@media (min-width: 1200px) {
+			gap: 150px;
+			margin-top: 80px;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			row-gap: 30px;
+			width: 100%;
+			max-width: 400px;
+
+			@media (min-width: 480px) {
+				row-gap: 35px;
+			}
+
+			@media (min-width: 768px) {
+				row-gap: 40px;
+				width: auto;
+				max-width: none;
+			}
+
+			@media (min-width: 1200px) {
+				row-gap: 50px;
+			}
+
+			li {
+				text-align: center;
+
+				@media (min-width: 768px) {
+					text-align: left;
+				}
+
+				h4 {
+					font-size: 20px;
+					margin-bottom: 10px;
+					font-weight: 700;
+
+					@media (min-width: 768px) {
+						font-size: 22px;
+						margin-bottom: 12px;
+					}
+
+					@media (min-width: 1200px) {
+						font-size: 26px;
+						margin-bottom: 14px;
+					}
+				}
+
+				p {
+					font-size: 16px;
+					line-height: 1.3;
+
+					@media (min-width: 768px) {
+						font-size: 18px;
+					}
+
+					@media (min-width: 1200px) {
+						font-size: 22px;
+					}
+				}
+
+				.info {
+					color: rgba(255, 253, 41, 1);
+					font-weight: 700;
+					font-size: 16px;
+					text-decoration: none;
+					display: block;
+					line-height: 1.4;
+
+					@media (min-width: 768px) {
+						font-size: 18px;
+					}
+
+					@media (min-width: 1200px) {
+						font-size: 22px;
+					}
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.hrefs {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				column-gap: 20px;
+				margin-top: 10px;
+
+				@media (min-width: 768px) {
+					justify-content: flex-start;
+					column-gap: 25px;
+					margin-top: 0;
+				}
+
+				@media (min-width: 1200px) {
+					column-gap: 30px;
+				}
+
+				img {
+					width: 40px;
+					box-shadow: 0 0 0px #fff;
+					border-radius: 50%;
+					transition: all 0.08s ease-in;
+
+					@media (min-width: 768px) {
+						width: 45px;
+					}
+
+					@media (min-width: 1200px) {
+						width: 50px;
+					}
+
+					&:hover {
+						box-shadow: 0 0px 4px #fff;
+						transform: scale(1.05);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Адаптация для очень маленьких экранов
+@media (max-width: 360px) {
+	.contacts {
+		padding: 40px 15px 60px;
+
+		h2 {
+			font-size: 28px;
+		}
+
+		&-wrapper {
+			margin-top: 30px;
+			gap: 30px;
+
+			ul {
+				row-gap: 25px;
+
+				li {
+					h4 {
+						font-size: 18px;
+						margin-bottom: 8px;
+					}
+
+					p {
+						font-size: 14px;
+					}
+
+					.info {
+						font-size: 14px;
+					}
+				}
+
+				.hrefs {
+					column-gap: 15px;
+
+					img {
+						width: 35px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Ландшафтная ориентация мобильных
+@media (max-width: 900px) and (orientation: landscape) {
+	.contacts {
+		padding: 40px 20px 60px;
+
+		&-wrapper {
+			flex-direction: row;
+			gap: 40px;
+			margin-top: 30px;
+
+			ul {
+				row-gap: 25px;
+
+				li {
+					text-align: left;
+
+					h4 {
+						font-size: 18px;
+					}
+
+					p {
+						font-size: 14px;
+					}
+
+					.info {
+						font-size: 14px;
+					}
+				}
+
+				.hrefs {
+					justify-content: flex-start;
+
+					img {
+						width: 35px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Для планшетов в портретной ориентации
+@media (min-width: 768px) and (max-width: 1023px) {
+	.contacts {
+		padding: 80px 40px 100px;
+
+		&-wrapper {
+			gap: 80px;
+		}
+	}
+}
+
+// Для узких экранов ноутбуков
+@media (min-width: 1024px) and (max-width: 1279px) {
+	.contacts {
+		padding: 100px 40px 120px;
+
+		&-wrapper {
+			gap: 120px;
+		}
+	}
+}
+
+// Центрирование email адресов на мобильных
+@media (max-width: 767px) {
+	.contacts-wrapper ul li .info {
+		text-align: center;
+	}
+}
+
+// Улучшение отступов для email блоков
+.contacts-wrapper ul li:has(.info:not(:only-child)) {
+	.info {
+		margin-bottom: 5px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,477 @@
+.carFleet {
+	position: relative;
+	width: 100%;
+	background: linear-gradient(
+		180deg,
+		rgba(26.520008087158203, 165.75, 32.089202880859375, 1),
+		rgba(14.279998779296875, 89.25, 17.27879524230957, 1) 100%
+	);
+	padding: 60px 20px 100px;
+
+	&__container {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		column-gap: 15px;
+		justify-content: center;
+		text-align: center;
+
+		img {
+			display: none;
+
+			@media (min-width: 568px) {
+				width: 60px;
+				height: 60px;
+				display: block;
+			}
+
+			@media (min-width: 768px) {
+				width: 70px;
+				height: 70px;
+				display: block;
+			}
+
+			@media (min-width: 1200px) {
+				width: 80px;
+				height: 80px;
+				display: block;
+			}
+		}
+
+		&-name {
+			font-size: 24px;
+			font-weight: 700;
+			letter-spacing: 0.5px;
+			line-height: 1.2;
+
+			@media (min-width: 768px) {
+				font-size: 36px;
+			}
+
+			@media (min-width: 1200px) {
+				font-size: 56px;
+				letter-spacing: 1.5px;
+			}
+
+			span {
+				color: rgba(255, 253, 41, 1);
+				font-size: 18px;
+				display: block;
+				margin-top: 5px;
+
+				@media (min-width: 768px) {
+					font-size: 24px;
+					display: inline;
+					margin-top: 0;
+					margin-left: 10px;
+				}
+
+				@media (min-width: 1200px) {
+					font-size: 42px;
+				}
+			}
+		}
+	}
+
+	&__subtitle {
+		color: rgba(255, 255, 255, 1);
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.3;
+		text-align: center;
+		width: 100%;
+		max-width: 480px;
+		margin: 30px auto 0;
+
+		@media (min-width: 768px) {
+			font-size: 20px;
+			text-align: left;
+			margin-top: 40px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 28px;
+			margin-top: 50px;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		margin-top: 60px;
+		width: 100%;
+
+		@media (min-width: 768px) {
+			margin-top: 80px;
+		}
+
+		@media (min-width: 1200px) {
+			margin-top: 150px;
+		}
+
+		&-slide {
+			padding: 0 10px;
+
+			img {
+				display: block;
+				margin: 0 auto;
+				width: 100%;
+				max-width: 280px;
+				height: auto;
+
+				@media (min-width: 480px) {
+					max-width: 350px;
+				}
+
+				@media (min-width: 768px) {
+					max-width: 500px;
+				}
+
+				@media (min-width: 1024px) {
+					max-width: 600px;
+				}
+
+				@media (min-width: 1200px) {
+					max-width: 800px;
+				}
+			}
+
+			.mark {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				column-gap: 12px;
+				margin-bottom: 30px;
+				flex-direction: column;
+				text-align: center;
+
+				@media (min-width: 768px) {
+					flex-direction: row;
+					margin-bottom: 40px;
+					column-gap: 18px;
+				}
+
+				@media (min-width: 1200px) {
+					margin-bottom: 50px;
+				}
+
+				img {
+					width: 40px;
+					margin: 0;
+
+					@media (min-width: 768px) {
+						width: 50px;
+					}
+
+					@media (min-width: 1200px) {
+						width: 60px;
+					}
+				}
+			}
+		}
+
+		.slick-slide:last-child,
+		.slick-slide:nth-child(8) {
+			.img {
+				width: 100%;
+				max-width: 220px;
+
+				@media (min-width: 480px) {
+					max-width: 280px;
+				}
+
+				@media (min-width: 768px) {
+					max-width: 400px;
+				}
+
+				@media (min-width: 1200px) {
+					max-width: 600px;
+				}
+			}
+
+			.mark {
+				img {
+					display: none;
+				}
+			}
+		}
+
+		h3 {
+			color: rgba(255, 255, 255, 1);
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 0.8px;
+			line-height: 1.2;
+			margin: 10px 0;
+
+			@media (min-width: 768px) {
+				font-size: 22px;
+				margin: 0;
+			}
+
+			@media (min-width: 1200px) {
+				font-size: 28px;
+			}
+		}
+
+		.control-prev {
+			position: absolute;
+			z-index: 3;
+			top: 50%;
+			left: 5px;
+			transform: translateY(-50%);
+			border: 2px solid rgba(255, 253, 41, 1);
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: rgba(255, 253, 41, 1);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: all 0.1s linear;
+
+			@media (min-width: 768px) {
+				width: 50px;
+				height: 50px;
+				left: 20px;
+			}
+
+			@media (min-width: 1200px) {
+				width: 70px;
+				height: 70px;
+				left: 110px;
+			}
+
+			&:hover {
+				background-color: rgb(217, 214, 23);
+			}
+		}
+
+		.control-next {
+			position: absolute;
+			z-index: 3;
+			top: 50%;
+			right: 5px;
+			transform: translateY(-50%);
+			border: 2px solid rgba(255, 253, 41, 1);
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: rgba(255, 253, 41, 1);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: all 0.1s linear;
+
+			@media (min-width: 768px) {
+				width: 50px;
+				height: 50px;
+				right: 20px;
+			}
+
+			@media (min-width: 1200px) {
+				width: 70px;
+				height: 70px;
+				right: 110px;
+			}
+
+			&:hover {
+				background-color: rgb(217, 214, 23);
+			}
+		}
+
+		i {
+			border: solid black;
+			border-width: 0 3px 3px 0;
+			display: block;
+			padding: 6px;
+
+			@media (min-width: 768px) {
+				border-width: 0 4px 4px 0;
+				padding: 8px;
+			}
+
+			@media (min-width: 1200px) {
+				border-width: 0 5px 5px 0;
+				padding: 10px;
+			}
+		}
+
+		.left {
+			transform: rotate(135deg);
+			-webkit-transform: rotate(135deg);
+			margin-left: 4px;
+
+			@media (min-width: 768px) {
+				margin-left: 6px;
+			}
+
+			@media (min-width: 1200px) {
+				margin-left: 10px;
+			}
+		}
+
+		.right {
+			transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg);
+			margin-right: 4px;
+
+			@media (min-width: 768px) {
+				margin-right: 6px;
+			}
+
+			@media (min-width: 1200px) {
+				margin-right: 10px;
+			}
+		}
+
+		.slick-dots {
+			position: relative;
+			bottom: -40px;
+			display: flex !important;
+			justify-content: center;
+			align-items: center;
+
+			@media (min-width: 768px) {
+				bottom: -50px;
+			}
+		}
+
+		.slick-dots li {
+			width: 20px;
+			height: 20px;
+			background: transparent;
+			border-radius: 50%;
+			border: 2px solid rgba(255, 253, 41, 1);
+			margin: 0 6px;
+
+			@media (min-width: 768px) {
+				width: 25px;
+				height: 25px;
+				margin: 0 8px;
+			}
+
+			@media (min-width: 1200px) {
+				width: 30px;
+				height: 30px;
+				margin: 0 10px;
+			}
+
+			button {
+				opacity: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.slick-dots li.slick-active {
+			background: rgba(255, 253, 41, 1);
+		}
+	}
+}
+
+// Адаптация для очень маленьких экранов
+@media (max-width: 360px) {
+	.carFleet {
+		padding: 40px 15px 80px;
+
+		&__logo {
+			flex-direction: column;
+			column-gap: 10px;
+			row-gap: 10px;
+
+			img {
+				width: 50px;
+				height: 50px;
+			}
+
+			&-name {
+				font-size: 20px;
+
+				span {
+					font-size: 16px;
+				}
+			}
+		}
+
+		&__subtitle {
+			font-size: 14px;
+			margin-top: 20px;
+		}
+
+		&__slider {
+			margin-top: 40px;
+
+			&-slide {
+				.mark {
+					margin-bottom: 20px;
+
+					img {
+						width: 35px;
+					}
+				}
+			}
+
+			h3 {
+				font-size: 16px;
+			}
+
+			.control-prev,
+			.control-next {
+				width: 35px;
+				height: 35px;
+			}
+
+			i {
+				padding: 5px;
+			}
+		}
+	}
+}
+
+// Ландшафтная ориентация мобильных
+@media (max-width: 900px) and (orientation: landscape) {
+	.carFleet {
+		padding: 40px 20px 80px;
+
+		&__logo {
+			img {
+				width: 50px;
+				height: 50px;
+			}
+
+			&-name {
+				font-size: 20px;
+
+				span {
+					font-size: 16px;
+				}
+			}
+		}
+
+		&__subtitle {
+			font-size: 16px;
+			margin-top: 20px;
+		}
+
+		&__slider {
+			margin-top: 40px;
+
+			&-slide {
+				img {
+					max-width: 250px;
+				}
+			}
+
+			.slick-slide:last-child,
+			.slick-slide:nth-child(8) {
+				.img {
+					max-width: 200px;
+				}
+			}
+		}
+	}
+}

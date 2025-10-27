@@ -4,9 +4,15 @@ import MeetScreenSlider from "./Sliders/MeetScreenSlider";
 const MeetScreen = () => {
 	return (
 		<section className="meetScreen">
-			<h1> Лучшая автошкола Краснодарского края</h1>
-			<MeetScreenSlider />
-			<button className="meetScreen-btn"> Записаться на обучение</button>
+			<div className="meetScreen__container">
+				<h1 className="meetScreen__title">
+					Лучшая автошкола Краснодарского края
+				</h1>
+				<MeetScreenSlider />
+				<button className="meetScreen-btn">
+					<a href="#contacts">Записаться на обучение</a>
+				</button>
+			</div>
 		</section>
 	);
 };

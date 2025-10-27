@@ -1,0 +1,136 @@
+.map-container {
+	width: 100%;
+	position: relative;
+	background: linear-gradient(
+		180deg,
+		rgba(26.520008087158203, 165.75, 32.089202880859375, 1),
+		rgba(14.279998779296875, 89.25, 17.27879524230957, 1) 100%
+	);
+
+	// Градиентный фон для контейнера карты
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: linear-gradient(
+			90deg,
+			transparent,
+			rgba(255, 253, 41, 0.5),
+			transparent
+		);
+		z-index: 2;
+	}
+}
+
+.map-iframe {
+	width: 100%;
+	display: block;
+
+	// Мобильные устройства
+	height: 300px;
+
+	// Планшеты
+	@media (min-width: 768px) {
+		height: 400px;
+	}
+
+	// Ноутбуки
+	@media (min-width: 1024px) {
+		height: 450px;
+	}
+
+	// Десктоп
+	@media (min-width: 1200px) {
+		height: 500px;
+	}
+
+	// Большие экраны
+	@media (min-width: 1440px) {
+		height: 550px;
+	}
+
+	// Очень большие экраны
+	@media (min-width: 1920px) {
+		height: 600px;
+	}
+}
+
+// Адаптация для очень маленьких экранов
+@media (max-width: 360px) {
+	.map-iframe {
+		height: 250px;
+	}
+}
+
+// Ландшафтная ориентация мобильных
+@media (max-width: 900px) and (orientation: landscape) {
+	.map-iframe {
+		height: 280px;
+	}
+}
+
+// Планшеты в ландшафтной ориентации
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+	.map-iframe {
+		height: 350px;
+	}
+}
+
+// Улучшение производительности на мобильных
+@media (max-width: 768px) {
+	.map-iframe {
+		// Уменьшаем качество карты для мобильных для лучшей производительности
+		transform: translateZ(0);
+		backface-visibility: hidden;
+		perspective: 1000;
+	}
+}
+
+// Поддержка темной темы (если нужно)
+@media (prefers-color-scheme: dark) {
+	.map-container {
+		// Яркость карты можно настроить под темную тему
+		filter: brightness(0.9);
+	}
+}
+
+// Улучшение доступности
+.map-iframe {
+	// Убедимся, что карта доступна для скринридеров
+	&[title] {
+		// Улучшение для скринридеров
+	}
+
+	// Фокус для доступности
+	&:focus {
+		outline: 2px solid rgba(255, 253, 41, 0.8);
+		outline-offset: -2px;
+	}
+}
+
+// Загрузочное состояние (опционально)
+.map-container {
+	position: relative;
+
+	&.loading::after {
+		content: "Загрузка карты...";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+		font-size: 16px;
+		z-index: 1;
+	}
+}
+
+// Улучшение для touch-устройств
+@media (hover: none) and (pointer: coarse) {
+	.map-iframe {
+		// Улучшения для тач-устройств
+		touch-action: pan-x pan-y;
+	}
+}

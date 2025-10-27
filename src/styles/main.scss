@@ -1,15 +1,26 @@
-@import "./base/reset.scss";
-
-@import "./blocks/meetScreen";
-
-:root  {
+:root {
 	background: rgba(39, 39, 39, 1);
 	color: rgba(255, 255, 255, 1);
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 html,
 body {
 	max-width: 100vw;
-	overflow-x: hidden;
 	font-family: var(--font-main);
 }
+
+@import "./base/reset.scss";
+
+@import "./blocks/meetScreen";
+@import "./blocks/carFleet";
+@import "./blocks/driverFleet";
+@import "./blocks/information";
+@import "./blocks/contacts";
+@import "./blocks/map";
+@import "./blocks/documents";
+@import "./blocks/faq";
+@import "./blocks/loading";
