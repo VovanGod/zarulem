@@ -159,11 +159,19 @@ const CarFleetSlider = () => {
 				))}
 			</SliderComponent>
 
-			<button onClick={prevSlide} className="control-btn control-prev">
-				<i className="arrow left"></i>
+			<button
+				onClick={prevSlide}
+				className="control-btn control-prev"
+				aria-label="Предыдущий слайд"
+			>
+				<i aria-hidden="true" className="arrow left"></i>
 			</button>
-			<button onClick={nextSlide} className="control-btn control-next">
-				<i className="arrow right"></i>
+			<button
+				onClick={nextSlide}
+				className="control-btn control-next"
+				aria-label="Следующий слайд"
+			>
+				<i aria-hidden="true" className="arrow right"></i>
 			</button>
 		</div>
 	);

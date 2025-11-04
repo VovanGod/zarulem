@@ -8,12 +8,12 @@ const Information = () => {
 					<h2>Стоимость обучения</h2>
 					<ul className="information__category">
 						<li>
-							<h4>Категория А </h4>
-							<span>25 000 ₽</span>
+							<h3>Категория А </h3>
+							<span>45 000 ₽</span>
 						</li>
-						<hr />
+						<hr aria-hidden="true" />
 						<li>
-							<h4>Категория B</h4> <span>48 000 ₽</span>
+							<h3>Категория B</h3> <span>83 000 ₽</span>
 						</li>
 					</ul>
 					<ul className="information__advantages">
@@ -33,31 +33,39 @@ const Information = () => {
 
 					<ul>
 						<li>
-							<img src="/icons/adv/adv1.svg" alt="" />
+							<div className="information__list-item">
+								<img src="/icons/adv/adv1.svg" alt="" />
+							</div>
 							Практические занятия по городу и автодрому
 						</li>
 						<li>
-							<img src="/icons/adv/adv2.svg" alt="" />
+							<div className="information__list-item">
+								<img src="/icons/adv/adv2.svg" alt="" />
+							</div>
 							Теоретические занятия
 						</li>
 						<li>
-							<img src="/icons/adv/adv3.svg" alt="" />
+							<div className="information__list-item">
+								<img src="/icons/adv/adv3.svg" alt="" />
+							</div>
 							ГСМ
 						</li>
 						<li>
-							<img src="/icons/adv/adv4.svg" alt="" />
+							<div className="information__list-item">
+								<img src="/icons/adv/adv4.svg" alt="" />
+							</div>
 							Система кредитования на любой срок
 						</li>
 						<li>
-							<img src="/icons/adv/adv5.svg" alt="" />
+							<div className="information__list-item">
+								<img src="/icons/adv/adv5.svg" alt="" />
+							</div>
 							Удобная рассрочка платежа
 						</li>
 						<li>
-							<img src="/icons/adv/adv6.svg" alt="" />
-							Бесплатная доставка учеников к автодрому на автобусе
-						</li>
-						<li>
-							<img src="/icons/adv/adv7.svg" alt="" />
+							<div className="information__list-item">
+								<img src="/icons/adv/adv6.svg" alt="" />
+							</div>
 							V.I.P. обучение
 						</li>
 					</ul>

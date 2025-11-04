@@ -89,16 +89,18 @@ const MeetScreenSlider = () => {
 						className={`control-btn control-prev ${
 							isPrevActive ? "active" : ""
 						}`}
+						aria-label="Предыдущий слайд"
 					>
-						<img src="/icons/man.svg" alt="Previous" />
+						<img aria-hidden={true} src="/icons/man.svg" alt="Previous" />
 					</button>
 					<button
 						onClick={nextSlide}
 						className={`control-btn control-next ${
 							isNextActive ? "active" : ""
 						}`}
+						aria-label="Следующий слайд"
 					>
-						<img src="/icons/woman.svg" alt="Next" />
+						<img aria-hidden={true} src="/icons/woman.svg" alt="Next" />
 					</button>
 				</div>
 			</div>
@@ -120,15 +122,17 @@ const MeetScreenSlider = () => {
 					onClick={prevSlide}
 					className={`control-btn control-prev ${isPrevActive ? "active" : ""}`}
 					disabled={!isPrevActive}
+					aria-label="Предыдущий слайд"
 				>
-					<img src="/icons/man.svg" alt="Previous" />
+					<img aria-hidden={true} src="/icons/man.svg" alt="Previous" />
 				</button>
 				<button
 					onClick={nextSlide}
 					className={`control-btn control-next ${isNextActive ? "active" : ""}`}
 					disabled={!isNextActive}
+					aria-label="Следующий слайд"
 				>
-					<img src="/icons/woman.svg" alt="Next" />
+					<img aria-hidden={true} src="/icons/woman.svg" alt="Next" />
 				</button>
 			</div>
 		</div>

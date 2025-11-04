@@ -123,8 +123,9 @@ const DriverFleetSlider = () => {
 			<button
 				onClick={prevSlide}
 				className={`control-btn control-prev ${!showPrevArrow ? "hidden" : ""}`}
+				aria-label="Предыдущий слайд"
 			>
-				<i className="arrow left"></i>
+				<i aria-hidden="true" className="arrow left"></i>
 			</button>
 
 			<SliderComponent ref={sliderRef} {...settings}>
@@ -141,8 +142,9 @@ const DriverFleetSlider = () => {
 			<button
 				onClick={nextSlide}
 				className={`control-btn control-next ${!showNextArrow ? "hidden" : ""}`}
+				aria-label="Следующий слайд"
 			>
-				<i className="arrow right"></i>
+				<i aria-hidden="true" className="arrow right"></i>
 			</button>
 		</div>
 	);
